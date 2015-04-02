@@ -1,41 +1,136 @@
 body {
-    background: #5B487F;
+    background: #fff;
     color: #000;
 }
 
 .address-book {
-    background: #F6F6F6;
+    background: #E4E1DC;
     width: 600px;
     margin: 40px auto;
-    border-radius: 2px; 
+    border-radius: 3px;
+}
+
+
+.panel {
+    background: #3F3E3C;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    width: 100%;
 }
 
 .search {
-    margin-bottom: 30px;
+    width: 90%;
+    display: inline-block;
 }
 
 .input-search {
-    border: none;
-    background: none;
-    width: 100%;
+    border: 1px solid #000;
+    border-radius: 2px;
+    background: #fff;
+    width: 90%;
     height: 30px;
     line-height: 30px;
     color: #000;
-    border-bottom: 2px solid #484C4B;
+    margin: 20px;
+    box-shadow: inset 1px 1px 2px 2px rgba(171,171,171,1);
+    padding: 5px;
+    box-sizing: border-box;
 }
 
-.input-search:focus {
-    outline: none;
+.add-user {
+    width: 10%;
+    display: inline-block;
+    border-left: 1px solid #000;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black, 0 0 1em #000;
+}
+
+.content {
+    display: flex;
 }
 
 .users {
     margin: 0;
     padding: 10px;
     list-style: none;
+    width: 100%;
 }
 
 .user {
     margin-bottom: 10px;
     padding: 10px 0;
     border-bottom: 1px solid #484C4B;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    display: inline-block;
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.remove-btn {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: #3F3E3C;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 16px;
+    text-shadow: 1px 1px 2px black, 0 0 1em #fff;
+    float: right;
+    cursor: pointer;
+    margin-right: 12px;
+    flex: none;
+}
+
+.detail {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+input {
+    border: none;
+    padding: 5px;
+    margin: 0 0 7px;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #3F3E3C;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    padding: 7px 0;
+    cursor: pointer;
+}
+
+.update, .remove {
+    width: 49%;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.remove {
+    background-color: #6C1006;
 }

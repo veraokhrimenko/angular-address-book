@@ -1,12 +1,12 @@
-<div ng-controller="UserDetailController" ng-init="init()">
-    <div ng-click="removeUser()" class="remove">remove</div>
+<div ng-controller="UserDetailController" ng-init="init()" class="detail">
     <form>
         <input ng-model="user.firstName" />
         <input ng-model="user.lastName" />
         <input ng-model="user.phone" />
         <input ng-model="user.email" />
         <input ng-model="user.address" />
-        <button ng-click="updateUser()">Submit</button>
+        <div class="update submit-btn" ng-click="updateUser()">Update</div>
+        <div class="remove submit-btn" ng-click="removeUser()">Remove</div>
     </form>
 
     <loading-process ng-show="isRequestInProcess"></loading-process>

@@ -1,13 +1,11 @@
 addressBook.config(function($stateProvider, $urlRouterProvider) {
-  //
-  // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/home");
-  //
-  // Now set up the states
-  $stateProvider.state('addressBook', {
+
+    $urlRouterProvider.otherwise("/home");
+
+    $stateProvider.state('addressBook', {
         abstract: true,
         url: '',
-        templateUrl: 'index.html'
+        templateUrl: 'templates/layout.html'
     });
 
     $stateProvider.state('addressBook.home', {

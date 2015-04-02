@@ -1,11 +1,11 @@
-<div class="addUser" ng-controller="addUserController">
+<div class="detail" ng-controller="addUserController">
     <form>
         <input ng-model="newUser.firstName" placeholder="first name" />
         <input ng-model="newUser.lastName" placeholder="last name" />
         <input ng-model="newUser.phone" placeholder="phone" />
         <input ng-model="newUser.email" placeholder="email" />
         <input ng-model="newUser.address" placeholder="address" />
-        <button ng-click="addUser()">Submit</button>
+        <div class="submit-btn" ng-click="addUser()">Create user</div>
     </form>
     
     <loading-process ng-show="isRequestInProcess"></loading-process>
