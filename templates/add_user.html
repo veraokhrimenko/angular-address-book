@@ -7,4 +7,6 @@
         <input ng-model="newUser.address" placeholder="address" />
         <button ng-click="addUser()">Submit</button>
     </form>
+    
+    <loading-process ng-show="isRequestInProcess"></loading-process>
 </div>

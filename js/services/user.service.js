@@ -8,7 +8,7 @@ function (
     var users = sync.$asArray();
 
     this.getUserList = function() {
-        return users;
+        return users.$loaded();
     };
 
     this.addUser = function(user) {
@@ -17,6 +17,10 @@ function (
 
     this.getUser = function(id) {
         return users.$getRecord(id);
+    };
+
+    this.updateUser = function(data) {
+        return users.$save(data);
     };
 
     this.removeUser = function(index) {

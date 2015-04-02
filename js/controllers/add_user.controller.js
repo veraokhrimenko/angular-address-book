@@ -1,8 +1,10 @@
 addressBook.controller('addUserController', [ 
-    '$scope', '$state', 'usersService',
+    '$scope', 'usersService',
 function (
-    $scope, $state, usersService
+    $scope, usersService
 ){
+    $scope.isRequestInProcess = false;
+
     $scope.newUser = {
         firstName: '',
         lastName: '',
@@ -12,9 +14,16 @@ function (
     };
 
     $scope.addUser = function(text) {
-        // TODO then
-        usersService.addUser($scope.newUser);
+        $scope.isRequestInProcess = true;
+        usersService.addUser($scope.newUser).then($scope.onRequestSuccess, $scope.onRequestError);;
+    };
 
+    $scope.onRequestSuccess = function() {
         $scope.newUser = {};
+        $scope.isRequestInProcess = false;
+    };
+
+    $scope.onRequestError = function() {
+        $scope.isRequestInProcess = false;
     };
 }]);

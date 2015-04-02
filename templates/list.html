@@ -1,4 +1,4 @@
-<div ng-controller="UserListController" class="list">
+<div ng-controller="UserListController" class="list" ng-init="init()">
     <div class="search">
         <input class="input-search" ng-model="query" placeholder="Search:" />
     </div>
@@ -6,12 +6,14 @@
     <div class="add-user" ui-sref="addressBook.home.add">+++</div>
 
     <ul class="users">
-        <li ng-repeat="user in users track by $index | filter:query" class="user">
+        <li ng-repeat="user in users | filter:query" class="user">
             <span ng-click="showDetailContact(user.$id)">{{ user.firstName }} {{ user.lastName }}</span>
-            <div ng-click="removeUser($index)">-</div>
+            <div ng-click="removeUser(user)">-</div>
         </li>
     </ul>
 
     <div ui-view="detail"></div>
     <div ui-view="addForm"></div>
+
+    <loading-process ng-show="isRequestInProcess"></loading-process>
 </div>
