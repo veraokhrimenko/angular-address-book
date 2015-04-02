@@ -1,0 +1,1 @@
+var addressBook = angular.module('addressBook', ['ui.router', 'firebase']);

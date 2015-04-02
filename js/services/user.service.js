@@ -5,14 +5,21 @@ function (
 ) {
     var ref = new Firebase("https://luminous-fire-8067.firebaseio.com/users");
     var sync = $firebase(ref);
+    var users = sync.$asArray();
 
     this.getUserList = function() {
-        return sync.$asArray();
+        return users;
     };
 
     this.addUser = function(user) {
-        var users = this.getUserList();
+        return users.$add(user);
+    };
 
-        users.$add(user);
+    this.getUser = function(id) {
+        return users.$getRecord(id);
+    };
+
+    this.removeUser = function(index) {
+        return users.$remove(index);
     };
 }]);;
