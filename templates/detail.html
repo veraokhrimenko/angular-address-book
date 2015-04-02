@@ -1,3 +1,10 @@
-<div >
-<div ui-view></div>sdas
+<div ng-controller="UserDetailController">
+    <form>
+        <input ng-model="user.firstName" />
+        <input ng-model="user.lastName" />
+        <input ng-model="user.phone" />
+        <input ng-model="user.email" />
+        <input ng-model="user.address" />
+        <button>Submit</button>
+    </form>
 </div>

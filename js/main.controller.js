@@ -13,9 +13,12 @@ addressBook.controller('UsersController', function ($scope, $http, $state) {
     }
 });
 
-addressBook.controller('UserDetailController', function ($scope) {
+addressBook.controller('UserDetailController', function ($scope, $http, $stateParams) {
     // TODO move to service
+    $scope.userId = $stateParams.id;
+
     $http.get('data/users.json').success(function(data) {
         $scope.users = data.users;
+        $scope.user = _.findWhere($scope.users, { id: +$scope.userId });
     });
 });

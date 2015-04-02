@@ -1,0 +1,41 @@
+body {
+    background: #5B487F;
+    color: #000;
+}
+
+.address-book {
+    background: #F6F6F6;
+    width: 600px;
+    margin: 40px auto;
+    border-radius: 2px; 
+}
+
+.search {
+    margin-bottom: 30px;
+}
+
+.input-search {
+    border: none;
+    background: none;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+    border-bottom: 2px solid #484C4B;
+}
+
+.input-search:focus {
+    outline: none;
+}
+
+.users {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+.user {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #484C4B;
+}

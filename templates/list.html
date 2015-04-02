@@ -1,11 +1,11 @@
-<div ng-controller="UsersController">
-    <div ui-view></div>
-    Search: <input ng-model="query">
+<div ng-controller="UsersController" class="list">
+    <div class="search">
+        <input class="input-search" ng-model="query" placeholder="Search:" />
+    </div>
 
-    <ul>
-        <li ng-repeat="user in users | filter:query">
+    <ul class="users">
+        <li ng-repeat="user in users | filter:query" class="user">
             <span ng-click="showDetailContact(user.id)">{{ user.firstName }} {{ user.lastName }}</span>
-            <p>{{user.snippet}}</p>
         </li>
     </ul>
 

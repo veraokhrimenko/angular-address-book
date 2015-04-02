@@ -5,11 +5,15 @@
         <title>Address book</title>
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
         <script src="js/main.controller.js"></script>
         <script src="js/app.router.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
-        <div ui-view>
+        <div ui-view class="address-book">
             <div ui-view="list"></div>
         </div>
     </body>
