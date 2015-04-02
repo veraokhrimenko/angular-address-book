@@ -9,7 +9,7 @@ addressBook.controller('UsersController', function ($scope, $http, $state) {
     $scope.showDetailContact = function(id) {
         console.log(id)
 
-        $state.go('home.detail', { id: id });
+        $state.go('addressBook.home.detail', { id: id });
     }
 });
 

@@ -4,18 +4,27 @@ addressBook.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/home");
   //
   // Now set up the states
-  $stateProvider
-    .state('home', {
+  $stateProvider.state('addressBook', {
+        abstract: true,
+        url: '',
+        templateUrl: 'index.html'
+    });
+
+    $stateProvider.state('addressBook.home', {
         url: "/home",
         views: {
-            "list": { templateUrl: "templates/list.html" },
-            "detail": { }
+            "list": { 
+                templateUrl: "templates/list.html" 
+            }
         }
-    })
-    .state('home.detail', {
+    });
+
+    $stateProvider.state('addressBook.home.detail', {
         url: "/user/:id",
         views: {
-            "detail": { templateUrl: "templates/detail.html" }
+            "detail": { 
+                templateUrl: "templates/detail.html" 
+            }
         }
-    })
+    });
 });
