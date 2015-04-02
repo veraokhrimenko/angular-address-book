@@ -6,18 +6,10 @@
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="js/main.controller.js"></script>
+        <script src="js/app.router.js"></script>
     </head>
     <body>
-        <div ui-view></div>
-        <div ng-controller="PhoneListCtrl">
-            Search: <input ng-model="query">
-
-            <ul>
-                <li ng-repeat="user in users | filter:query">
-                  <span ng-click="showDetailContact(user.id)">{{ user.firstName }} {{ user.lastName }}</span>
-                  <p>{{user.snippet}}</p>
-                </li>
-              </ul>
-        </div>
+        <div ui-view="list"></div>
+        <div ui-view="detail"></div>
     </body>
 </html>

@@ -1,0 +1,10 @@
+<div ng-controller="UsersController">
+    Search: <input ng-model="query">
+
+    <ul>
+        <li ng-repeat="user in users | filter:query">
+            <span ng-click="showDetailContact(user.id)">{{ user.firstName }} {{ user.lastName }}</span>
+            <p>{{user.snippet}}</p>
+        </li>
+    </ul>
+</div>

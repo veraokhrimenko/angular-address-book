@@ -1,12 +1,21 @@
-var phonecatApp = angular.module('addressBook', ['ui.router']);
+var addressBook = angular.module('addressBook', ['ui.router']);
 
-phonecatApp.controller('PhoneListCtrl', function ($scope, $http) {
-	// TODO move to service
+addressBook.controller('UsersController', function ($scope, $http, $state) {
+    // TODO move to service
     $http.get('data/users.json').success(function(data) {
         $scope.users = data.users;
     });
 
     $scope.showDetailContact = function(id) {
         console.log(id)
+
+        $state.go('home.detail', { id: id });
     }
+});
+
+addressBook.controller('UserDetailController', function ($scope) {
+    // TODO move to service
+    $http.get('data/users.json').success(function(data) {
+        $scope.users = data.users;
+    });
 });
