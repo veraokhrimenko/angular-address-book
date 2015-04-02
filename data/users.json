@@ -1,0 +1,7 @@
+{ "users": 
+	[
+    	{"id": 1, "firstName": "User 1 Jemma", "lastName": "Second Name 1", "phone": "034542234234", "address": "some street 2"},
+    	{"id": 2, "firstName": "User 2 Helga", "lastName": "Second Name 2", "phone": "03454sdd4234", "address": "some street 1"},
+    	{"id": 3, "firstName": "User 3 Marta", "lastName": "Second Name 3", "phone": "0345424434", "address": "some street 3"}
+	]
+}
