@@ -10,4 +10,9 @@ function (
         return sync.$asArray();
     };
 
+    this.addUser = function(user) {
+        var users = this.getUserList();
+
+        users.$add(user);
+    };
 }]);;

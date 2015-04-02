@@ -1,10 +1,10 @@
-<div class="addUser">
+<div class="addUser" ng-controller="addUserController">
     <form>
-        <input ng-model="newUser.firstName" />
-        <input ng-model="newUser.lastName" />
-        <input ng-model="newUser.phone" />
-        <input ng-model="newUser.email" />
-        <input ng-model="newUser.address" />
+        <input ng-model="newUser.firstName" placeholder="first name" />
+        <input ng-model="newUser.lastName" placeholder="last name" />
+        <input ng-model="newUser.phone" placeholder="phone" />
+        <input ng-model="newUser.email" placeholder="email" />
+        <input ng-model="newUser.address" placeholder="address" />
         <button ng-click="addUser()">Submit</button>
     </form>
 </div>
