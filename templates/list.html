@@ -3,6 +3,8 @@
         <input class="input-search" ng-model="query" placeholder="Search:" />
     </div>
 
+    <div class="add-user" ui-sref="addressBook.home.add">+++</div>
+
     <ul class="users">
         <li ng-repeat="user in users | filter:query" class="user">
             <span ng-click="showDetailContact(user.id)">{{ user.firstName }} {{ user.lastName }}</span>
@@ -10,4 +12,5 @@
     </ul>
 
     <div ui-view="detail"></div>
+    <div ui-view="addForm"></div>
 </div>

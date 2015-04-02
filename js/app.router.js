@@ -27,4 +27,13 @@ addressBook.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     });
+
+    $stateProvider.state('addressBook.home.add', {
+        url: "/add",
+        views: {
+            "addForm": { 
+                templateUrl: "templates/add_user.html" 
+            }
+        }
+    });
 });
