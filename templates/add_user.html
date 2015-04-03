@@ -1,9 +1,9 @@
 <div class="detail" ng-controller="addUserController">
     <form ng-submit="addUser()">
-        <input ng-model="newUser.firstName" placeholder="first name" />
-        <input ng-model="newUser.lastName" placeholder="last name" />
+        <input ng-model="newUser.firstName" placeholder="first name" required />
+        <input ng-model="newUser.lastName" placeholder="last name" required />
         <input ng-model="newUser.phone" placeholder="phone" />
-        <input ng-model="newUser.email" placeholder="email" />
+        <input ng-model="newUser.email" placeholder="email" required type="email"/>
         <input ng-model="newUser.address" placeholder="address" />
         <input type="submit" class="submit-btn" tabindex="-1" value="Create user" />
     </form>

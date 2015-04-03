@@ -99,7 +99,7 @@ body {
 }
 
 input {
-    border: none;
+    border: 1px solid #fff;
     padding: 5px;
     margin: 0 0 7px;
     background-color: #fff;
@@ -111,6 +111,7 @@ input {
 
 input:focus {
     outline: none;
+    border: 1px solid #6C1006;
 }
 
 .submit-btn {

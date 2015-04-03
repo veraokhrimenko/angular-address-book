@@ -1,9 +1,9 @@
 <div ng-controller="UserDetailController" ng-init="init()" class="detail">
     <form ng-submit="updateUser()">
-        <input ng-model="user.firstName" placeholder="First name" />
-        <input ng-model="user.lastName" placeholder="Last name" />
+        <input ng-model="user.firstName" placeholder="First name" required />
+        <input ng-model="user.lastName" placeholder="Last name" required />
         <input ng-model="user.phone" placeholder="Phone" />
-        <input ng-model="user.email" placeholder="Email" />
+        <input ng-model="user.email" placeholder="Email" required type="email" />
         <input ng-model="user.address" placeholder="Address" />
         <input type="submit" class="update submit-btn" value="Update" />
         <div class="remove submit-btn" ng-click="removeUser()">Remove</div>
