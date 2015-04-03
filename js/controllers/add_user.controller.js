@@ -13,7 +13,7 @@ function (
         address: ''
     };
 
-    $scope.addUser = function(text) {
+    $scope.addUser = function() {
         $scope.isRequestInProcess = true;
         usersService.addUser($scope.newUser).then($scope.onRequestSuccess, $scope.onRequestError);;
     };
