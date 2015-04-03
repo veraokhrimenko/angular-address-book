@@ -7,7 +7,9 @@ function (
     $scope.isRequestInProcess = false;
 
     $scope.init = function() {
-        $scope.user = usersService.getUser($scope.userId);
+        usersService.getUserList().then(function() {
+            $scope.user = usersService.getUser($scope.userId);
+        });
     };
 
     $scope.updateUser = function() {
